@@ -4,6 +4,7 @@ import javax.annotation.Nonnull;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import pl.dyrtcraft.xp.DyrtBungeeCord;
 import pl.dyrtcraft.xp.DyrtCraftXP;
@@ -33,6 +34,14 @@ public final class DyrtCraft {
 		return database;
 	}
 	
+	/**
+	 * Zarzadzanie {@link ItemStack} z roznymi mozliwosciami na serwerach
+	 * @return {@link Kits} Zarzadzanie kitami
+	 * @author TheMolkaPL
+	 * @since 1.0
+	 * @see Member
+	 * @see BungeeCord
+	 */
 	public static Kits getKits() {
 		return kits;
 	}
