@@ -22,6 +22,13 @@ public final class DyrtCraft {
 	private static Kits kits = new DyrtKits();
 	private static Util util = new DyrtUtils();
 	
+	/**
+	 * Zarzadzanie kontami w bazie danych MySQL
+	 * @return {@link Database} Zarzadzanie baza MySQL
+	 * @author TheMolkaPL
+	 * @since 1.0
+	 * @see Member
+	 */
 	public static Database getDatabase() {
 		return database;
 	}
