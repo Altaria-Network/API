@@ -68,6 +68,12 @@ public final class DyrtCraft {
 		return bungeeCord;
 	}
 	
+	/**
+	 * Metody ktore nie pasuja do zadnych innych {@link Class} w API {@link DyrtCraftXP}
+	 * @return {@link Util} Metody inne, nie pasujace do innych {@link Class}
+	 * @author TheMolkaPL
+	 * @since 1.0
+	 */
 	public static Util getUtils() {
 		return util;
 	}
