@@ -11,6 +11,12 @@ package pl.dyrtcraft;
  */
 public enum Server {
 	
-	APOCALYPTO_HARDCORE, LOBBY, MINEZ, PAINTBALL, PVP, SKYBLOCK
+	APOCALYPTO_HARDCORE,
+	ARCADE,
+	LOBBY,
+	MINEZ,
+	PVP,
+	SKYBLOCK,
+	UNKNOWN
 	
 }
