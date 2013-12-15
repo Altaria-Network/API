@@ -15,7 +15,7 @@ public class PlayerChangeServerEvent extends Event implements Cancellable {
 	private boolean cancel;
 	private Player player;
 	private Server server;
-	private String message;
+	private String message = ChatColor.GRAY + "Przelaczanie na serwer " + ChatColor.GOLD + DyrtCraft.getProxy().getServerName(Server.UNKNOWN) + ChatColor.GRAY + "...";
 	
 	public PlayerChangeServerEvent(Player player, Server server) {
 		this.player = player;
