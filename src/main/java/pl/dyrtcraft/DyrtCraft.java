@@ -46,11 +46,29 @@ public final class DyrtCraft {
 		return kits;
 	}
 	
+	/**
+	 * {@link Member} Zarzadzanie {@link Player} w API {@link DyrtCraftXP}
+	 * @author confuser
+	 * @author TheMolkaPL
+	 * @since 1.0
+	 * @param player {@link Player}
+	 * @return {@link Member} Zarzadzanie {@link Player}
+	 * @see #getMember(String)
+	 */
 	public static Member getMember(@Nonnull Player player) {
 		memName = player;
 		return member;
 	}
 	
+	/**
+	 * {@link Member} Zarzadzanie {@link Player} w API {@link DyrtCraftXP}
+	 * @author confuser
+	 * @author TheMolkaPL
+	 * @since 1.0
+	 * @param name {@link String} {@link Player}
+	 * @return {@link Member} Zarzadzanie {@link Player}
+	 * @see #getMember(Player)
+	 */
 	public static Member getMember(@Nonnull String name) {
 		Player player = Bukkit.getPlayer(name);
 		memName = player;
