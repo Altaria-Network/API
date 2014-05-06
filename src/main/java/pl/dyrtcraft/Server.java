@@ -12,11 +12,14 @@ package pl.dyrtcraft;
 public enum Server {
 	
 	APOCALYPTO_HARDCORE,
-	ARCADE,
+	ARCADE1,
+	ARCADE2,
+	ARCADE3,
 	LOBBY,
 	MINEZ,
-	PVP,
 	SKYBLOCK,
+	FREEBUILD,
+	SURVIVAL,
 	UNKNOWN
 	
 }

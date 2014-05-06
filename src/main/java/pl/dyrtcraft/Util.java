@@ -18,6 +18,10 @@ import pl.dyrtcraft.xp.DyrtCraftXP;
  */
 public interface Util {
 	
+	public boolean isInfoBook();
+	
+	public boolean isShop();
+	
 	/**
 	 * Wyslij powiadomienie do {@link ServerOperator} oraz {@link Permission} "dyrtcraftxp.notify"
 	 * Jezeli potrzebujesz wyslac jakies powiadomienie do {@link ServerOperator}, uzyj tej metody
@@ -38,5 +42,9 @@ public interface Util {
 	 * @see Member
 	 */
 	public void sendNotify(@Nonnull String message, @Nonnull boolean priority);
+	
+	public void setInfoBook(boolean infoBook);
+	
+	public void setShop(boolean shop);
 	
 }

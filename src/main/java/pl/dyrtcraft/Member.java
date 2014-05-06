@@ -152,61 +152,6 @@ public interface Member {
 	 */
 	public int getXp();
 	
-	/**
-	 * Sprawdz czy {@link Member} posiada pasek Enderdragona
-	 * Jezeli chcesz sprawdzic czy gracz {@link Member} posiada pasek Enderdragon na swoim ekranie, uzyj tej metody!
-	 * <br>
-	 * <b>Przyklad:</b>
-	 * <br>
-	 * <code>
-	 * if(DyrtCraft.getMember("Notch").hasDragonBar());
-	 * Bukkit.getPlayer("Notch").sendMessage("You have a DragonBar!");
-	 * </code>
-	 * <br>
-	 * Powyzszy kod wysyla do gracza "Notch" wiadomosc "You have DragonBar!"
-	 * 
-	 * @author confuser
-	 * @since 1.0
-	 * @return <code>true</code> Jezeli gracz {@link Member} posiada na ekranie DragonBar.
-	 * <code>false</code> Jezeli gracz {@link Member} nie posiada na ekranie DragonBar.
-	 * @see #removeDragon()
-	 * @see #setDragonLevel(float)
-	 * @see #setDragonMessage(String)
-	 * @see #setDragonMessage(String, float)
-	 * @see #setDragonMessage(String, int)
-	 */
-	public boolean hasDragonBar();
-	
-	/**
-	 * Usun DragonBar graczowi {@link Member}
-	 * Jezeli chcesz usunac DragonBar graczowi {@link Member}, uzyj tej metody
-	 * <br>
-	 * <b>Przyklad:</b>
-	 * <br>
-	 * <code>
-	 * 
-	 * </code>
-	 * <br>
-	 * Powyzszy kod
-	 * 
-	 * @author confuser
-	 * @since 1.0
-	 * @see #hasDragonBar()
-	 * @see #setDragonLevel(float)
-	 * @see #setDragonMessage(String)
-	 * @see #setDragonMessage(String, float)
-	 * @see #setDragonMessage(String, int)
-	 */
-	public void removeDragon();
-	
-	public void setDragonLevel(@Nonnull float percent);
-	
-	public void setDragonMessage(String message);
-	
-	public void setDragonMessage(String message, @Nonnull float percent);
-	
-	public void setDragonMessage(String message, @Nonnull int seconds);
-	
 	@Deprecated
 	public void setDeads(int deads);
 	

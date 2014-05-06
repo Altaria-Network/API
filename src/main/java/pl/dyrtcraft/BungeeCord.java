@@ -2,6 +2,7 @@ package pl.dyrtcraft;
 
 import javax.annotation.Nonnull;
 
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 /**
@@ -14,6 +15,24 @@ import org.bukkit.inventory.Inventory;
  * @see #getServerName(Server)
  */
 public interface BungeeCord {
+	
+	/**
+	 * @author TheMolkaPL
+	 * @since 1.0.1
+	 */
+	public boolean isCurrentServer(@Nonnull Server server);
+	
+	/**
+	 * @author TheMolkaPL
+	 * @since 1.0.1
+	 */
+	public Server getCurrentServer();
+	
+	/**
+	 * @author TheMolkaPL
+	 * @since 1.0.1
+	 */
+	public int getOnlineCount(@Nonnull Server server);
 	
 	/**
 	 * Zdobadz serwer z adresu
@@ -65,18 +84,19 @@ public interface BungeeCord {
 	 * <b>Przyklad:</b>
 	 * <br>
 	 * <code>
-	 * Player.openInventory(DyrtCraft.getProxy().getServerChooserInventory());
+	 * Player.openInventory(DyrtCraft.getProxy().getServerChooserInventory(Player));
 	 * </code>
 	 * <br>
 	 * Powyzszy kod otwiera {@link Inventory} z wyborem serwerow dla {@link Player}
 	 * 
+	 * @param player {@link Player} dla którego ma zostac stworzone {@link Inventory}
 	 * @return Otwarcie {@link Inventory} z wyborem serwerow sieci DyrtCraft Network
 	 * @author TheMolkaPL
 	 * @since 1.0
 	 * @see Member#connect(Server)
 	 * @see #getServerName(Server)
 	 */
-	public Inventory getServerChooserInventory();
+	public Inventory getServerChooserInventory(@Nonnull Player player);
 	
 	/**
 	 * Zdobadz nazwe serwera z {@link Server}
@@ -98,5 +118,17 @@ public interface BungeeCord {
 	 * @see #getServerChooserInventory()
 	 */
 	public String getServerName(@Nonnull Server server);
+	
+	/**
+	 * @author TheMolkaPL
+	 * @since 1.0.1
+	 */
+	public int getSlots(@Nonnull Server server);
+	
+	/**
+	 * @author TheMolkaPL
+	 * @since 1.0.1
+	 */
+	public void setCurrentServer(@Nonnull Server server);
 	
 }

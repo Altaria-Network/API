@@ -2,7 +2,6 @@ package pl.dyrtcraft;
 
 import javax.annotation.Nonnull;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -12,16 +11,9 @@ import pl.dyrtcraft.xp.DyrtDatabase;
 import pl.dyrtcraft.xp.DyrtKits;
 import pl.dyrtcraft.xp.DyrtMember;
 import pl.dyrtcraft.xp.DyrtUtils;
+import pl.dyrtcraft.xp.portals.DyrtPortalsManager;
 
 public final class DyrtCraft {
-	
-	private static DyrtCraftXP plugin = new DyrtCraftXP();
-	private static Player memName;
-	private static BungeeCord bungeeCord = new DyrtBungeeCord();
-	private static Member member = new DyrtMember(memName);
-	private static Database database = new DyrtDatabase(plugin);
-	private static Kits kits = new DyrtKits();
-	private static Util util = new DyrtUtils();
 	
 	/**
 	 * Zarzadzanie kontami w bazie danych MySQL
@@ -31,7 +23,7 @@ public final class DyrtCraft {
 	 * @see Member
 	 */
 	public static Database getDatabase() {
-		return database;
+		return new DyrtDatabase();
 	}
 	
 	/**
@@ -43,7 +35,7 @@ public final class DyrtCraft {
 	 * @see BungeeCord
 	 */
 	public static Kits getKits() {
-		return kits;
+		return new DyrtKits();
 	}
 	
 	/**
@@ -56,23 +48,11 @@ public final class DyrtCraft {
 	 * @see #getMember(String)
 	 */
 	public static Member getMember(@Nonnull Player player) {
-		memName = player;
-		return member;
+		return new DyrtMember(player);
 	}
 	
-	/**
-	 * {@link Member} Zarzadzanie {@link Player} w API {@link DyrtCraftXP}
-	 * @author confuser
-	 * @author TheMolkaPL
-	 * @since 1.0
-	 * @param name {@link String} {@link Player}
-	 * @return {@link Member} Zarzadzanie {@link Player}
-	 * @see #getMember(Player)
-	 */
-	public static Member getMember(@Nonnull String name) {
-		Player player = Bukkit.getPlayer(name);
-		memName = player;
-		return member;
+	public static PortalsManager getPortals() {
+		return new DyrtPortalsManager();
 	}
 	
 	/**
@@ -83,7 +63,7 @@ public final class DyrtCraft {
 	 * @see Member#connect(Server)
 	 */
 	public static BungeeCord getProxy() {
-		return bungeeCord;
+		return new DyrtBungeeCord();
 	}
 	
 	/**
@@ -93,7 +73,7 @@ public final class DyrtCraft {
 	 * @since 1.0
 	 */
 	public static Util getUtils() {
-		return util;
+		return new DyrtUtils();
 	}
 	
 }
