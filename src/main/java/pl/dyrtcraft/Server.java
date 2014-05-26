@@ -20,6 +20,8 @@ public enum Server {
 	SKYBLOCK,
 	FREEBUILD,
 	SURVIVAL,
+	RPG,
+	TEST,
 	UNKNOWN
 	
 }
